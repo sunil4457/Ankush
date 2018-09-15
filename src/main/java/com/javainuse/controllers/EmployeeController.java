@@ -39,5 +39,11 @@ public class EmployeeController {
 		return new ModelAndView("allEmployees", "employees", allEmployees);
 
 	}
+	@RequestMapping(value = "/listEmployees.html", method = RequestMethod.POST)
+	public ModelAndView employees2() {
+		List<Employee> allEmployees = employeeData.findAll();
+		return new ModelAndView("allEmployees", "employees", allEmployees);
+
+	}
 
 }
